@@ -7,6 +7,7 @@ import youtube from './assets/icon-youtube.svg'
 import twitch from './assets/icon-twitch.svg'
 import './App.css'
 import Header from './header.jsx'
+import AboutMe from "./aboutme.jsx";
 
 const openLinkInNewWindow = (url) => {
     return (
@@ -21,6 +22,7 @@ const openLinkInNewWindow = (url) => {
     return (
         <>
             <Header logo={logo} facebook={facebook} discord={discord} instagram={instagram} youtube={youtube} twitch={twitch} openLinkInNewWindow={openLinkInNewWindow}/>
+            <AboutMe />
         </>
     )
 }
