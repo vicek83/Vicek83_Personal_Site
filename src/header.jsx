@@ -1,3 +1,4 @@
+import React from 'react';
 const Header = ({logo, youtube, discord, instagram, facebook, twitch, openLinkInNewWindow}) =>
 {
 
@@ -11,7 +12,7 @@ const Header = ({logo, youtube, discord, instagram, facebook, twitch, openLinkIn
                         <img src={logo} alt="logo"/>
                         <p className="uppercase text-4xl font-bold text-black"> vicek83 - świat przygodówek</p>
                         <div className="flex gap-2">
-                            <a href="#!" onClick={() => openLinkInNewWindow("https://www.youtube.com/@vicek83")}>
+                            <a href="https://www.youtube.com/@vicek83" target="_blank">
                                 <img src={youtube} className="w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
                                      alt="icon-youtube"/>
                             </a>

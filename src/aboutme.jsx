@@ -1,10 +1,9 @@
+import React from 'react';
 const AboutMe = () => {
 
     return (
         <>
             <div className="container mx-auto">
-                <div
-                    className="mt-4 pt-16 shadow-lg py-4 px-8 bg-gradient-to-b from from-gray-200 to-gray-100 rounded ring ring-gray-300 ring-offset-2">
                     <h1 className="font-['courgette'] text-7xl">O mnie</h1>
                     <div className="flex justify-around items-top mt-14 gap-14 text-center">
                         <div className="w-1/3">
@@ -22,7 +21,7 @@ const AboutMe = () => {
                             <p className="pt-3">Zgromadziłem wokół siebie fantastyczną społeczność - ludzi, którzy tak jak ja kochają przygodówki. Za swoją działalność na YouTube zostałem nagrodzony statuetką Twórcy wideo roku 2015 w kategorii Gaming (podczas Gali twórców 2016), co tylko utwierdziło mnie w przekonaniu, że to, co robię, ma sens.</p>
 
                         </div>
-                    </div>
+
 
                 </div>
 
