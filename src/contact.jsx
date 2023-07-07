@@ -1,43 +1,62 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-    const [form, setForm] = useState({ name: "", email: "", subject: "", message: ""});
+    const [contactForm, setContactForm] = useState({ name: "", email: "", subject: "", message: ""});
     const [success, setSuccess] = useState(false);
     const [nameErr, setNameErr] = useState(false);
     const [emailErr, setEmailErr] = useState(false);
     const [subjectErr, setSubjectErr] = useState(false);
     const [messageErr, setMessageErr] = useState(false);
 
+    const form = useRef();
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setForm((prevState) => {
+        setContactForm((prevState) => {
             return {
                 ...prevState,
                 [name]: value,
             };
         });
     };
-    const onSubmitHandler = (e) => {
+
+
+    const clearResultMessages = () => {
         setNameErr(false);
         setEmailErr(false);
         setSubjectErr(false);
         setMessageErr(false);
         setSuccess(false);
+    }
 
+
+    const onSubmitHandler = (e) => {
+        clearResultMessages();
         e.preventDefault();
-        if (form.name.length < 2) {
+        if (contactForm.name.length < 2) {
             return setNameErr(true);
-        } else if (form.email.length < 4) {
+        } else if (contactForm.email.length < 4) {
             return setEmailErr(true);
-        } else if (!form.email.includes('@')) {
+        } else if (!contactForm.email.includes('@')) {
             return setEmailErr(true);
-        } else if (form.subject.length < 2) {
+        } else if (contactForm.subject.length < 2) {
             return setSubjectErr(true);
-        } else if (form.message.length < 2) {
+        } else if (contactForm.message.length < 2) {
             return setMessageErr(true);
         } else {
-            console.log("email to " + form.email);
-            setSuccess(true);
+
+
+            emailjs.sendForm('service_tp7qrx9', 'template_c9fzu88', form.current, 'ir9yujskEU4jMjN8k')
+                .then((result) => {
+                    console.log(result.text);
+                    setContactForm({ name: "", email: "", subject: "", message: "" });
+                    setSuccess(true);
+
+                }, (error) => {
+                    console.log(error.text);
+                });
+
 
         }
 
@@ -53,7 +72,7 @@ const Contact = () => {
                     <hr className="mx-auto w-64 h-1 my-8 bg-gray-600"></hr>
 
                     <div className="flex justify-center">
-                        <form onSubmit={onSubmitHandler} className="mt-14 w-2/3">
+                        <form ref={form} onSubmit={onSubmitHandler} className="mt-14 w-2/3">
 
                             <div className="flex flex-col">
                                 <div className="flex flex-col align-middle">
@@ -61,7 +80,7 @@ const Contact = () => {
                                            htmlFor="name">Imię:</label>
                                     <input
                                         className="border-2 border-solid border-gray-500 rounded h-9 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        type="text" name="name" value={form.name} onChange={handleChange}
+                                        type="text" name="name" value={contactForm.name} onChange={handleChange}
                                         placeholder="Imię"/>
                                 </div>
                                 <div className="flex flex-col">
@@ -69,7 +88,7 @@ const Contact = () => {
                                         e-mail:</label>
                                     <input
                                         className="border-2 border-solid border-gray-500 rounded h-9 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        type="email" name="email" value={form.email} onChange={handleChange}
+                                        type="email" name="email" value={contactForm.email} onChange={handleChange}
                                         placeholder="Adres e-mail"/>
                                 </div>
                                 <div className="flex flex-col">
@@ -77,7 +96,7 @@ const Contact = () => {
                                         wiadomości:</label>
                                     <input
                                         className="border-2 border-solid border-gray-500 rounded h-9 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        type="text" name="subject" value={form.subject} onChange={handleChange}
+                                        type="text" name="subject" value={contactForm.subject} onChange={handleChange}
                                         placeholder="Temat wiadomości"/>
                                 </div>
                                 <div className="flex flex-col">
@@ -85,7 +104,7 @@ const Contact = () => {
                                         wiadomości:</label>
                                     <textarea
                                         className="border-2 border-solid border-gray-500 rounded h-60 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        value={form.message} name="message" onChange={handleChange}
+                                        value={contactForm.message} name="message" onChange={handleChange}
                                         placeholder="Treść wiadomości"/>
 
                                     {success && <p className="successMsg text-green-600 font-bold text-xl mb-8">Wiadomość została wysłana!</p>}
