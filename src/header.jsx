@@ -1,5 +1,5 @@
 import React from 'react';
-const Header = ({logo, youtube, discord, instagram, facebook, twitch, openLinkInNewWindow}) =>
+const Header = ({logo, youtube, discord, instagram, facebook, twitch}) =>
 {
 
     return (
