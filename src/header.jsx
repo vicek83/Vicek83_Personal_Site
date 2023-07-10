@@ -1,5 +1,11 @@
 import React from 'react';
-const Header = ({logo, youtube, discord, instagram, facebook, twitch}) =>
+import logo from './assets/logo.png'
+import facebook from './assets/icon-facebook.svg'
+import discord from './assets/icon-discord.svg'
+import instagram from './assets/icon-instagram.svg'
+import youtube from './assets/icon-youtube.svg'
+import twitch from './assets/icon-twitch.svg'
+const Header = () =>
 {
 
     return (
