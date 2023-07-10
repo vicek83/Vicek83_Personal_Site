@@ -17,6 +17,7 @@ const Blog = () => {
                 .from('Blog')
                 .select('*')
                 .order('id', {ascending: false})
+                .limit(3)
 
             if (error) throw error;
             if (Blog !== null) {
@@ -37,11 +38,14 @@ const Blog = () => {
                     <div className="flex flex-wrap">
                         {blogNotes.map((note => (
 
-                            <div key={note.id} className="w-1/3 p-4">
-                                <h3 className="font-black">{note.created_at}</h3>
-                                <h1 className="font-['courgette'] text-3xl">{note.title}</h1>
-                                <p className="">{note.description}</p>
-                                <img src={note.image} alt="Blog Image"/>
+                            <div key={note.id} className="w-1/3 p-4 border-black border-2 border-solid rounded mb-3 shadow-lg hover:shadow-2xl">
+                                <div className="relative">
+                                    <h1 className="font-['courgette'] text-3xl">{note.title}</h1>
+                                    <h3 className="font-black text-sm">{note.created_at}</h3>
+                                    <p className="">{note.description}</p>
+                                    <img src={note.image} className="hover:brightness-75 transition-opacity" alt="Blog Image"/>
+                                    <div className="absolute "></div>
+                                </div>
 
                             </div>
                         )))}
