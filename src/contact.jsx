@@ -80,31 +80,31 @@ const Contact = () => {
                                            htmlFor="name">Imię:</label>
                                     <input
                                         className="border-2 border-solid border-gray-500 rounded h-9 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        type="text" name="name" value={contactForm.name} onChange={handleChange}
+                                        type="text" name="name" id="name" value={contactForm.name} onChange={handleChange}
                                         placeholder="Imię"/>
                                 </div>
                                 <div className="flex flex-col">
-                                    <label className="text-left ml-6 mb-4 text-xl font-bold" htmlFor="name">Adres
+                                    <label className="text-left ml-6 mb-4 text-xl font-bold" htmlFor="email">Adres
                                         e-mail:</label>
                                     <input
                                         className="border-2 border-solid border-gray-500 rounded h-9 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        type="email" name="email" value={contactForm.email} onChange={handleChange}
+                                        type="email" name="email" id="email" value={contactForm.email} onChange={handleChange}
                                         placeholder="Adres e-mail"/>
                                 </div>
                                 <div className="flex flex-col">
-                                    <label className="text-left ml-6 mb-4 text-xl font-bold" htmlFor="name">Temat
+                                    <label className="text-left ml-6 mb-4 text-xl font-bold" htmlFor="subject">Temat
                                         wiadomości:</label>
                                     <input
                                         className="border-2 border-solid border-gray-500 rounded h-9 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        type="text" name="subject" value={contactForm.subject} onChange={handleChange}
+                                        type="text" name="subject" id="subject" value={contactForm.subject} onChange={handleChange}
                                         placeholder="Temat wiadomości"/>
                                 </div>
                                 <div className="flex flex-col">
-                                    <label className="text-left ml-6 mb-4 text-xl font-bold" htmlFor="name">Treść
+                                    <label className="text-left ml-6 mb-4 text-xl font-bold" htmlFor="message">Treść
                                         wiadomości:</label>
                                     <textarea
                                         className="border-2 border-solid border-gray-500 rounded h-60 p-2 mb-6 ml-6 hover:ring ring-gray-500"
-                                        value={contactForm.message} name="message" onChange={handleChange}
+                                        value={contactForm.message} name="message" id="message" onChange={handleChange}
                                         placeholder="Treść wiadomości"/>
 
                                     {success && <p className="successMsg text-green-600 font-bold text-xl mb-8">Wiadomość została wysłana!</p>}
