@@ -3,6 +3,7 @@ import {BrowserRouter} from 'react-router-dom';
 import './App.css'
 import Header from './header.jsx'
 import Routing from './routes.jsx';
+import FetchBlog from "./fetchBlog.jsx";
 
 
 function App() {
@@ -10,12 +11,7 @@ function App() {
 
     return (
         <>
-
-                <Header/>
-                <div
-                    className="container mx-auto mt-4 pt-16 shadow-lg py-4 px-8 bg-gradient-to-b from from-gray-200 to-gray-100 rounded ring ring-gray-300 ring-offset-2">
-                    <Routing />
-                </div>
+                   <Routing />
 
         </>
 
