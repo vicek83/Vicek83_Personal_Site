@@ -4,7 +4,7 @@ import Blog from "./blog.jsx";
 import Post from "./post.jsx";
 import blog from "./blog.jsx";
 
-const FetchBlog = () => {
+const FetchBlog = ({numberOfNotes}) => {
 
     const [blogNotes, setBlogNotes] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -20,7 +20,7 @@ const FetchBlog = () => {
                 .from('Blog')
                 .select('*')
                 .order('id', {ascending: false})
-                .limit(18)
+                .limit(numberOfNotes)
 
             if (error) throw error;
             if (Blog !== null) {

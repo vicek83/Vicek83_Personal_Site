@@ -4,7 +4,7 @@ import './index.css'
 import Header from './header.jsx'
 import Routing from './routes.jsx';
 import FetchBlog from "./fetchBlog.jsx";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 
 function App() {

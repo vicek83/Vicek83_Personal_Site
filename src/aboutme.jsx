@@ -27,6 +27,8 @@ const AboutMe = () => {
                 </div>
 
             </div>
+            <hr className="mt-24 mb-24 h-1 mx-auto my-4 bg-gray-600 rounded" />
+
 
 
         </>
