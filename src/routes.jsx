@@ -15,6 +15,7 @@ import Contact from "./contact.jsx";
 import Post from "./post.jsx";
 import FetchBlog from "./fetchBlog.jsx";
 import Header from "./header.jsx";
+import Main from "./main.jsx";
 
 
 const Routing = () => {
@@ -25,7 +26,7 @@ const Routing = () => {
             <div
                 className="container mx-auto mt-4 pt-16 shadow-lg py-4 px-8 bg-gradient-to-b from from-gray-200 to-gray-100 rounded ring ring-gray-300 ring-offset-2">
             <Routes>
-                    <Route path='/' element={<AboutMe />} />
+                    <Route path='/' element={<Main />} />
                     <Route path='/blog' element={<FetchBlog />} />
                 <Route
                     path="blog/:id"
