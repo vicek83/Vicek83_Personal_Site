@@ -16,6 +16,7 @@ import Post from "./post.jsx";
 import FetchBlog from "./fetchBlog.jsx";
 import Header from "./header.jsx";
 import Main from "./main.jsx";
+import Footer from "./footer.jsx";
 
 
 const Routing = () => {
@@ -35,6 +36,7 @@ const Routing = () => {
                 <Route path='/contact' element={<Contact />} />
             </Routes>
             </div>
+            <Footer />
         </BrowserRouter>
 
     )
