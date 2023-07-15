@@ -10,10 +10,10 @@ const Blog = ({ blogNotes }) => {
             <div className="container mx-auto">
                 <div
                     className="">
-                    <div className="flex flex-wrap">
+                    <div className="grid grid-cols-3 gap-3">
                         {blogNotes.map((note => (
-                            <Link key={note.id} to={`/blog/${note.id}`} state={blogNotes} className="w-1/3">
-                            <button key={note.id} className="p-4 border-black border-2 border-solid rounded mb-3 shadow-lg hover:shadow-2xl" >
+                            <Link key={note.id} to={`/blog/${note.id}`} state={blogNotes} className="">
+                            <button key={note.id} className="p-4 border-black border-2 border-solid rounded mb-1 shadow-lg hover:shadow-2xl" >
                                 <div className="relative">
                                     <h1 className="font-['courgette'] text-3xl">{note.title}</h1>
                                     <h3 className="font-black text-sm">{note.created_at}</h3>

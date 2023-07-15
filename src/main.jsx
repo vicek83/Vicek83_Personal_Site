@@ -8,7 +8,7 @@ const Main = () => {
     return (
         <>
             <AboutMe/>
-            <h2 className="overflow-hidden font-['courgette'] text-center text-7xl mb-12">Zajrzyj na bloga!</h2>
+            <h2 className="overflow-hidden font-['courgette'] text-center text-6xl mb-12">Zajrzyj na bloga!</h2>
             <FetchBlog numberOfNotes={3}/>
         </>
     )

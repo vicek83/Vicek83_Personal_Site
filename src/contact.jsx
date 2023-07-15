@@ -67,7 +67,7 @@ const Contact = () => {
             <div className="container mx-auto">
 
                 <div
-                    className="mt-4 pt-16 shadow-lg py-4 px-8 bg-gradient-to-b from from-gray-200 to-gray-100 rounded ring ring-gray-300 ring-offset-2">
+                    className="">
                     <h1 className="text-2xl font-bold">Napisz do mnie</h1>
                     <hr className="mx-auto w-64 h-1 my-8 bg-gray-600"></hr>
 

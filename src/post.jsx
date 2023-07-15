@@ -30,6 +30,8 @@ console.log(id);
                                         <h1 className="font-['courgette'] text-5xl mb-8">{note.title}</h1>
                                         <h3 className="font-black text-sm mb-8">{note.created_at}</h3>
                                         <p className="text-lg leading-8 text-justify mb-8">{note.description}</p>
+                                        <p className="text-lg leading-8 text-justify mb-8">{note.description_2}</p>
+                                        <p className="text-lg leading-8 text-justify mb-8">{note.description_3}</p>
                                         <div className="flex justify-center items-center mb-8">
                                         <ReactPlayer url={note.video} controls />
                                         </div>

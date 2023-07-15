@@ -5,7 +5,7 @@ const AboutMe = () => {
     return (
         <>
             <div className="container mx-auto">
-                    <h1 className="font-['courgette'] text-7xl">O mnie</h1>
+                    <h1 className="font-['courgette'] text-6xl">O mnie</h1>
                     <div className="flex justify-around items-top mt-14 gap-14 text-center">
                         <div className="w-1/3">
                             <h2 className="overflow-hidden text-2xl font-['courgette'] text-center">Pasjonat przygodówek</h2>
@@ -27,7 +27,7 @@ const AboutMe = () => {
                 </div>
 
             </div>
-            <hr className="mt-24 mb-24 h-1 mx-auto my-4 bg-gray-600 rounded" />
+            <hr className="mt-24 mb-16 h-1 mx-auto my-4 bg-gray-600 rounded" />
 
 
 
