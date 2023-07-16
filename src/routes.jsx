@@ -17,6 +17,8 @@ import FetchBlog from "./fetchBlog.jsx";
 import Header from "./header.jsx";
 import Main from "./main.jsx";
 import Footer from "./footer.jsx";
+import FetchYoutube from "./fetchYoutube.jsx";
+import Playlists from "./playlists.jsx";
 
 
 const Routing = () => {
@@ -33,6 +35,11 @@ const Routing = () => {
                     path="blog/:id"
                     element={<Post />}
                 />
+                <Route path='/youtube' element={<FetchYoutube />} />
+                <Route
+                path="youtube/:id"
+                element={<Playlists />}
+            />
                 <Route path='/contact' element={<Contact />} />
             </Routes>
             </div>
