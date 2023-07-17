@@ -19,6 +19,8 @@ import Main from "./main.jsx";
 import Footer from "./footer.jsx";
 import FetchYoutube from "./fetchYoutube.jsx";
 import Playlists from "./playlists.jsx";
+import FetchYoutubeReviews from "./fetchYoutubeReviews.jsx";
+import Review from "./review.jsx";
 
 
 const Routing = () => {
@@ -39,7 +41,14 @@ const Routing = () => {
                 <Route
                 path="youtube/:id"
                 element={<Playlists />}
+
             />
+                <Route path='/youtube/reviews' element={<FetchYoutubeReviews />} />
+                <Route
+                    path="youtube/reviews/:id"
+                    element={<Review />}
+
+                />
                 <Route path='/contact' element={<Contact />} />
             </Routes>
             </div>

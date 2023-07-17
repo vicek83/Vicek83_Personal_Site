@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactPlayer from "react-player";
 import {Link, useLocation, useParams} from "react-router-dom";
+import blog from "./blog.jsx";
 
 
-const Playlists = () => {
+const Review = () => {
 
     const location = useLocation();
-    const playlists = location.state;
+    const playlist = location.state;
 
     const {id} = useParams();
-    console.log(playlists);
+    console.log(playlist);
     console.log(id);
     console.log(location.state);
     return (
@@ -17,24 +18,24 @@ const Playlists = () => {
             <div className="container mx-auto">
 
 
-                {playlists.map((playlist => {
-                    if (playlist.id === (id)) {
+                {playlist.map((review => {
+                    if (review.id === (id)) {
                         return (
                             <>
-                                <div key={playlist.id}
+                                <div key={review.id}
                                      className="">
                                     <div className="">
-                                        <h1 className="font-['courgette'] text-5xl mb-8">{playlist.snippet.title}</h1>
-                                        <p className="text-lg leading-8 text-justify mb-8">{playlist.snippet.description}</p>
+                                        <h1 className="font-['courgette'] text-5xl mb-8">{review.snippet.title}</h1>
+                                        <p className="text-lg leading-8 text-justify mb-8">{review.snippet.description}</p>
                                         <div className="">
                                             <iframe className="w-1/2 h-96 mx-auto"
-                                                src={`https://www.youtube.com/embed?listType=playlist&list=${playlist.id}`}
-                                                title="YouTube Playlist"
-                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                                allowFullScreen
+                                                    src={`https://www.youtube.com/embed/${review.snippet.resourceId.videoId}`}
+                                                    title="YouTube video"
+                                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen
                                             />
                                         </div>
-                                        <Link to="/youtube">
+                                        <Link to="/youtube/reviews">
                                             <button
                                                 className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">powrót
                                             </button>
@@ -59,4 +60,4 @@ const Playlists = () => {
     );
 }
 
-export default Playlists
+export default Review

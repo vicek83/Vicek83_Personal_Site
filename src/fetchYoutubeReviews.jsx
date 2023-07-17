@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from 'react';
-import Youtube from "./youtube.jsx";
+import YoutubeReviews from "./youtubeReviews.jsx";
 
 
 const apiKey = import.meta.env.VITE_YOUTUBE_API;
-const channelId = "UCCTC_DxJjVPoYqOJTHGxl4w";
+const playlistId = "PL1ffmftq2FG8ev7JLgSCMHlPHzyH1f7SJ";
 
-export default function FetchYoutube() {
-    const [playlists, setPlaylists] = useState([]);
+export default function FetchYoutubeReviews() {
+    const [playlist, setPlaylist] = useState([]);
     const getData = async () => {
 
         const response = await fetch(
-            `https://www.googleapis.com/youtube/v3/playlists?part=snippet&maxResults=50&channelId=${channelId}&key=${apiKey}`
+            `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=${playlistId}&key=${apiKey}`
         );
 
         if (response.ok) {
             const data = await response.json();
-            setPlaylists(data.items);
+            setPlaylist(data.items);
 
         } else {
             throw new Error("Błąd wczytywania danych!");
@@ -35,7 +35,7 @@ export default function FetchYoutube() {
 
     return (
         <>
-            <Youtube playlists={playlists}/>
+            <YoutubeReviews playlist={playlist}/>
         </>
     )
 
