@@ -5,10 +5,12 @@ import discord from './assets/icon-discord.svg'
 import instagram from './assets/icon-instagram.svg'
 import youtube from './assets/icon-youtube.svg'
 import twitch from './assets/icon-twitch.svg'
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const Header = () => {
 
+    const activeLink = "bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 ring ring-offset-2 ring-cyan-600 hover:bg-cyan-500";
+    const normalLink = "bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500";
     return (
         <>
 
@@ -48,27 +50,46 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center justify-between">
-                        <Link to="/">
+                        <NavLink end
+                                 to="/"
+                        className={({isActive}) =>
+                            isActive ?
+                            activeLink : normalLink
+                        }>
                             <button
-                                className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">strona
-                                główna
+                                className="uppercase">strona główna
                             </button>
-                        </Link>
-                        <Link to="/blog">
+                        </NavLink>
+                        <NavLink end
+                                 to="/blog"
+                                 className={({isActive}) =>
+                                     isActive ?
+                                         activeLink : normalLink
+                                 }>
                             <button
-                                className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">blog
+                                className="uppercase">blog
                             </button>
-                        </Link>
-                        <Link to="/youtube">
+                        </NavLink>
+                        <NavLink end
+                                 to="/youtube"
+                                 className={({isActive}) =>
+                                     isActive ?
+                                         activeLink : normalLink
+                                 }>
                             <button
-                                className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">youtube
+                                className="uppercase">youtube
                             </button>
-                        </Link>
-                        <Link to="/contact">
+                        </NavLink>
+                        <NavLink end
+                                 to="/contact"
+                                 className={({isActive}) =>
+                                     isActive ?
+                                         activeLink : normalLink
+                                 }>
                             <button
-                                className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">kontakt
+                                className="uppercase">kontakt
                             </button>
-                        </Link>
+                        </NavLink>
                     </div>
 
 
