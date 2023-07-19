@@ -15,7 +15,6 @@ const Review = () => {
     };
 
     const {id} = useParams();
-    console.log(playlist);
     console.log(id);
     console.log(location.state);
     return (

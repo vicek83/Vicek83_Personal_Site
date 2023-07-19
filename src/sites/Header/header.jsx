@@ -60,7 +60,7 @@ const Header = () => {
                                 className="uppercase">strona główna
                             </button>
                         </NavLink>
-                        <NavLink end
+                        <NavLink
                                  to="/blog"
                                  className={({isActive}) =>
                                      isActive ?
@@ -70,7 +70,7 @@ const Header = () => {
                                 className="uppercase">blog
                             </button>
                         </NavLink>
-                        <NavLink end
+                        <NavLink
                                  to="/youtube"
                                  className={({isActive}) =>
                                      isActive ?
