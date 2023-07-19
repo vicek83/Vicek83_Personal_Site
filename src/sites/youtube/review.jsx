@@ -8,6 +8,12 @@ const Review = () => {
     const location = useLocation();
     const playlist = location.state;
 
+    const descriptionSplitting = (description) => {
+        return description.split('*').map((paragraph, index) => (
+            <p className="mb-8" key={index}>{paragraph}</p>
+        ));
+    };
+
     const {id} = useParams();
     console.log(playlist);
     console.log(id);
@@ -25,7 +31,7 @@ const Review = () => {
                                      className="">
                                     <div className="">
                                         <h1 className="font-['courgette'] text-5xl mb-8">{review.snippet.title}</h1>
-                                        <p className="text-lg leading-8 text-justify mb-8">{review.snippet.description}</p>
+                                        <p className="text-lg leading-8 text-justify mb-8">{descriptionSplitting(review.snippet.description)}</p>
                                         <div className="">
                                             <iframe className="w-1/2 h-96 mx-auto"
                                                     src={`https://www.youtube.com/embed/${review.snippet.resourceId.videoId}`}
