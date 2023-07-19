@@ -25,6 +25,7 @@ const FetchBlog = ({numberOfNotes}) => {
             if (Blog !== null) {
                 console.log(Blog);
                 setBlogNotes(Blog);
+                setIsLoading(false);
 
             }
         } catch (error) {
@@ -35,7 +36,10 @@ const FetchBlog = ({numberOfNotes}) => {
 
     return (
         <>
-            <Blog blogNotes={blogNotes} />
+            {isLoading ? ( <p className="text-2xl">Trwa pobieranie danych...</p>
+                ) : (
+                    <Blog blogNotes={blogNotes} />
+                )}
         </>
     )
 }

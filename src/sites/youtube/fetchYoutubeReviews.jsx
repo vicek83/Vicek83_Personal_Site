@@ -7,6 +7,7 @@ const playlistId = "PL1ffmftq2FG8ev7JLgSCMHlPHzyH1f7SJ";
 
 export default function FetchYoutubeReviews() {
     const [playlist, setPlaylist] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const getData = async () => {
 
         const response = await fetch(
@@ -16,6 +17,7 @@ export default function FetchYoutubeReviews() {
         if (response.ok) {
             const data = await response.json();
             setPlaylist(data.items);
+            setIsLoading(false);
 
         } else {
             throw new Error("Błąd wczytywania danych!");
@@ -35,7 +37,10 @@ export default function FetchYoutubeReviews() {
 
     return (
         <>
+            {isLoading ? ( <p className="text-2xl">Trwa pobieranie danych...</p>
+            ) : (
             <YoutubeReviews playlist={playlist}/>
+            )}
         </>
     )
 

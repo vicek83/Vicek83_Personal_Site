@@ -7,6 +7,7 @@ const channelId = "UCCTC_DxJjVPoYqOJTHGxl4w";
 
 export default function FetchYoutube() {
     const [playlists, setPlaylists] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
     const getData = async () => {
 
         const response = await fetch(
@@ -16,6 +17,7 @@ export default function FetchYoutube() {
         if (response.ok) {
             const data = await response.json();
             setPlaylists(data.items);
+            setIsLoading(false);
 
         } else {
             throw new Error("Błąd wczytywania danych!");
@@ -35,7 +37,10 @@ export default function FetchYoutube() {
 
     return (
         <>
+            {isLoading ? ( <p className="text-2xl">Trwa pobieranie danych...</p>
+            ) : (
             <Youtube playlists={playlists}/>
+            )}
         </>
     )
 
