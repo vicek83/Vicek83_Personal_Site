@@ -33,7 +33,7 @@ const Playlists = () => {
                                         <h1 className="font-['courgette'] text-5xl mb-8">{playlist.snippet.title}</h1>
                                         <p className="text-lg leading-8 text-justify mb-8">{descriptionSplitting(playlist.snippet.description)}</p>
                                         <div className="">
-                                            <iframe className="w-1/2 h-96 mx-auto"
+                                            <iframe className="w-full max-w-screen-sm h-96 mx-auto"
                                                 src={`https://www.youtube.com/embed?listType=playlist&list=${playlist.id}`}
                                                 title="YouTube Playlist"
                                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
