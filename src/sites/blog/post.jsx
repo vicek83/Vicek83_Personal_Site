@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactPlayer from "react-player";
 import {Link, useLocation, useParams} from "react-router-dom";
-import blog from "./blog.jsx";
+
 
 
 const Post = () => {

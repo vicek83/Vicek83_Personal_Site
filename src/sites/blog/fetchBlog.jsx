@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {supabase} from "./supabaseClient.js";
+import {supabase} from "../../supabaseClient.js";
 import Blog from "./blog.jsx";
-import Post from "./post.jsx";
-import blog from "./blog.jsx";
+
 
 const FetchBlog = ({numberOfNotes}) => {
 

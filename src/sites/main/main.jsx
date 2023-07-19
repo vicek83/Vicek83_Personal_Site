@@ -1,6 +1,6 @@
 import React from 'react';
 import AboutMe from "./aboutme.jsx";
-import FetchBlog from "./fetchBlog.jsx";
+import FetchBlog from "../blog/fetchBlog.jsx";
 
 
 const Main = () => {

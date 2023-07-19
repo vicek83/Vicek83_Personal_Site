@@ -9,18 +9,16 @@ import {
     NavLink,
     Outlet
 } from 'react-router-dom';
-import AboutMe from "./aboutme.jsx";
-import Blog from "./blog.jsx";
-import Contact from "./contact.jsx";
-import Post from "./post.jsx";
-import FetchBlog from "./fetchBlog.jsx";
-import Header from "./header.jsx";
-import Main from "./main.jsx";
-import Footer from "./footer.jsx";
-import FetchYoutube from "./fetchYoutube.jsx";
-import Playlists from "./playlists.jsx";
-import FetchYoutubeReviews from "./fetchYoutubeReviews.jsx";
-import Review from "./review.jsx";
+import Contact from "./sites/contact/contact.jsx";
+import Post from "./sites/blog/post.jsx";
+import FetchBlog from "./sites/blog/fetchBlog.jsx";
+import Header from "./sites/Header/header.jsx";
+import Main from "./sites/main/main.jsx";
+import Footer from "./sites/Footer/footer.jsx";
+import FetchYoutube from "./sites/youtube/fetchYoutube.jsx";
+import Playlists from "./sites/youtube/playlists.jsx";
+import FetchYoutubeReviews from "./sites/youtube/fetchYoutubeReviews.jsx";
+import Review from "./sites/youtube/review.jsx";
 
 
 const Routing = () => {

@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './assets/logo.png'
-import facebook from './assets/icon-facebook.svg'
-import discord from './assets/icon-discord.svg'
-import instagram from './assets/icon-instagram.svg'
-import youtube from './assets/icon-youtube.svg'
-import twitch from './assets/icon-twitch.svg'
-import {Link, NavLink} from "react-router-dom";
+import logo from '../../assets/logo.png'
+import facebook from '../../assets/icon-facebook.svg'
+import discord from '../../assets/icon-discord.svg'
+import instagram from '../../assets/icon-instagram.svg'
+import youtube from '../../assets/icon-youtube.svg'
+import twitch from '../../assets/icon-twitch.svg'
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
 

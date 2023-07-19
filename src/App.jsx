@@ -1,9 +1,7 @@
 import React from 'react';
-import './App.css'
-import './index.css'
-import Header from './header.jsx'
+import './css/App.css'
+import './css/index.css'
 import Routing from './routes.jsx';
-import FetchBlog from "./fetchBlog.jsx";
 import ReactDOM from "react-dom/client";
 
 
