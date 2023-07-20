@@ -13,7 +13,7 @@ const Footer = () => {
 
             <div className="container mx-auto">
                 <header
-                    className="mt-4 mb-2 shadow-lg py-4 px-8 bg-gradient-to-b from from-gray-300 to-gray-400 rounded ring ring-gray-300 ring-offset-2">
+                    className="mt-4 mb-2 shadow-lg py-4 px-8 bg-gradient-to-b from from-sky-200 to-sky-400 rounded ring ring-sky-500 ring-offset-2">
 
                     <p className="text-xl font-bold mb-8">Copyright ©2023 Vicek83</p>
 

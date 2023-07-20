@@ -17,7 +17,7 @@ const Header = () => {
 
             <div className="container mx-auto">
                 <header
-                    className="mt-2 shadow-lg py-4 px-8 bg-gradient-to-b from from-gray-200 to-gray-300 rounded ring ring-gray-300 ring-offset-2">
+                    className="mt-2 shadow-lg py-4 px-8 bg-gradient-to-b from from-sky-200 to-white rounded ring ring-sky-500 ring-offset-2">
                     <div className="flex items-center justify-between">
                         <img src={logo} alt="logo"/>
                         <p className="uppercase text-4xl font-bold text-black"> vicek83 - świat przygodówek</p>

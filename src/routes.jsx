@@ -27,7 +27,7 @@ const Routing = () => {
         <BrowserRouter>
             <Header />
             <div
-                className="container mx-auto mt-4 pt-16 shadow-lg py-4 px-8 bg-gradient-to-b from from-gray-200 to-gray-100 rounded ring ring-gray-300 ring-offset-2">
+                className="container mx-auto mt-4 pt-16 shadow-lg py-4 px-8 bg-gradient-to-b from from-sky-50 to-sky-100 rounded ring ring-sky-500 ring-offset-2">
             <Routes>
                     <Route path='/' element={<Main />} />
                     <Route path='/blog' element={<FetchBlog />} />
