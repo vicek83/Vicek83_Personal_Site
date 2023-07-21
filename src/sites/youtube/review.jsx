@@ -2,7 +2,6 @@ import React from 'react';
 import {Link, useLocation, useParams} from "react-router-dom";
 
 
-
 const Review = () => {
 
     const location = useLocation();
@@ -57,7 +56,6 @@ const Review = () => {
 
 
             </div>
-
 
 
         </>

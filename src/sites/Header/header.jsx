@@ -52,30 +52,30 @@ const Header = () => {
                     <div className="flex flex-wrap items-center justify-between">
                         <NavLink end
                                  to="/"
-                        className={({isActive}) =>
-                            isActive ?
-                            activeLink : normalLink
-                        }>
+                                 className={({isActive}) =>
+                                     isActive ?
+                                         activeLink : normalLink
+                                 }>
                             <button
                                 className="uppercase">strona główna
                             </button>
                         </NavLink>
                         <NavLink
-                                 to="/blog"
-                                 className={({isActive}) =>
-                                     isActive ?
-                                         activeLink : normalLink
-                                 }>
+                            to="/blog"
+                            className={({isActive}) =>
+                                isActive ?
+                                    activeLink : normalLink
+                            }>
                             <button
                                 className="uppercase">blog
                             </button>
                         </NavLink>
                         <NavLink
-                                 to="/youtube"
-                                 className={({isActive}) =>
-                                     isActive ?
-                                         activeLink : normalLink
-                                 }>
+                            to="/youtube"
+                            className={({isActive}) =>
+                                isActive ?
+                                    activeLink : normalLink
+                            }>
                             <button
                                 className="uppercase">youtube
                             </button>

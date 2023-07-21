@@ -25,32 +25,32 @@ const Routing = () => {
     return (
 
         <BrowserRouter>
-            <Header />
+            <Header/>
             <div
                 className="container mx-auto mt-4 pt-16 shadow-lg py-4 px-8 bg-gradient-to-b from from-sky-50 to-sky-100 rounded ring ring-sky-500 ring-offset-2">
-            <Routes>
-                    <Route path='/' element={<Main />} />
-                    <Route path='/blog' element={<FetchBlog />} />
-                <Route
-                    path="blog/:id"
-                    element={<Post />}
-                />
-                <Route path='/youtube' element={<FetchYoutube />} />
-                <Route
-                path="youtube/:id"
-                element={<Playlists />}
+                <Routes>
+                    <Route path='/' element={<Main/>}/>
+                    <Route path='/blog' element={<FetchBlog/>}/>
+                    <Route
+                        path="blog/:id"
+                        element={<Post/>}
+                    />
+                    <Route path='/youtube' element={<FetchYoutube/>}/>
+                    <Route
+                        path="youtube/:id"
+                        element={<Playlists/>}
 
-            />
-                <Route path='/youtube/reviews' element={<FetchYoutubeReviews />} />
-                <Route
-                    path="youtube/reviews/:id"
-                    element={<Review />}
+                    />
+                    <Route path='/youtube/reviews' element={<FetchYoutubeReviews/>}/>
+                    <Route
+                        path="youtube/reviews/:id"
+                        element={<Review/>}
 
-                />
-                <Route path='/contact' element={<Contact />} />
-            </Routes>
+                    />
+                    <Route path='/contact' element={<Contact/>}/>
+                </Routes>
             </div>
-            <Footer />
+            <Footer/>
         </BrowserRouter>
 
     )
