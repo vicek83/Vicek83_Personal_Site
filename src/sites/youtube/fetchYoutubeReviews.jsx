@@ -26,7 +26,7 @@ export default function FetchYoutubeReviews() {
 
     useEffect(() => {
         getData()
-            .then((res) => {
+            .then(() => {
             })
             .catch((e) => {
                 console.log(e.message);

@@ -26,8 +26,7 @@ export default function FetchYoutube() {
 
     useEffect(() => {
         getData()
-            .then((res) => {
-                console.log(res);
+            .then(() => {
             })
             .catch((e) => {
                 console.log(e.message);
