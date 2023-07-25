@@ -9,15 +9,14 @@ const Playlists = () => {
 
     const descriptionSplitting = (description) => {
         return description.split('*').map((paragraph, index) => (
-            <p className="mb-8" key={index}>{paragraph}</p>
+
+            <p className="mb-8 text-lg leading-8 text-justify" key={index}>{paragraph}</p>
         ));
     };
 
 
     const {id} = useParams();
-    console.log(playlists);
-    console.log(id);
-    console.log(location.state);
+
     return (
         <>
             <div className="container mx-auto">
@@ -31,7 +30,7 @@ const Playlists = () => {
                                      className="">
                                     <div className="">
                                         <h1 className="font-['courgette'] text-5xl mb-8">{playlist.snippet.title}</h1>
-                                        <p className="text-lg leading-8 text-justify mb-8">{descriptionSplitting(playlist.snippet.description)}</p>
+                                        {descriptionSplitting(playlist.snippet.description)}
                                         <div className="">
                                             <iframe className="w-full max-w-screen-sm h-96 mx-auto"
                                                 src={`https://www.youtube.com/embed?listType=playlist&list=${playlist.id}`}

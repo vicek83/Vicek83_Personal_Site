@@ -1,13 +1,8 @@
 import React from 'react';
-import {createRoot} from 'react-dom/client';
 import {
     BrowserRouter,
-    HashRouter,
     Route,
-    Routes,
-    Link,
-    NavLink,
-    Outlet
+    Routes
 } from 'react-router-dom';
 import Contact from "./sites/contact/contact.jsx";
 import Post from "./sites/blog/post.jsx";

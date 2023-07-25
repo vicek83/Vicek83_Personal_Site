@@ -10,7 +10,7 @@ function App() {
 
     return (
         <>
-                   <Routing />
+            <Routing/>
         </>
 
     )
@@ -20,6 +20,6 @@ export default App
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <App />
+        <App/>
     </React.StrictMode>,
 )

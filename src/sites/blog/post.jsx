@@ -10,8 +10,6 @@ const Post = () => {
     const blogNotes = location.state;
 
     const {id} = useParams();
-    console.log(blogNotes);
-    console.log(id);
     return (
         <>
             <div className="container mx-auto">
