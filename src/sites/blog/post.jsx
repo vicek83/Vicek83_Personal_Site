@@ -1,6 +1,18 @@
 import React from 'react';
 import ReactPlayer from "react-player";
 import {Link, useLocation, useParams} from "react-router-dom";
+import {
+    EmailShareButton,
+    FacebookShareButton,
+    TwitterShareButton,
+} from "react-share";
+
+import {
+    EmailIcon,
+    FacebookIcon,
+    FacebookMessengerIcon,
+    TwitterIcon,
+} from "react-share";
 
 
 
@@ -8,6 +20,7 @@ const Post = () => {
 
     const location = useLocation();
     const blogNotes = location.state;
+    const baseUrl = "https://vicek83.netlify.app/blog"
 
     const {id} = useParams();
     return (
@@ -30,6 +43,7 @@ const Post = () => {
                                             <div className="flex justify-center items-center mb-8">
                                                 <ReactPlayer url={note.video} controls/>
                                             </div>
+                                            <FacebookShareButton url={`${baseUrl}/${id}`}>Udostępnij na Facebooku</FacebookShareButton>
                                             <Link to="/blog">
                                                 <button
                                                     className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">powrót
