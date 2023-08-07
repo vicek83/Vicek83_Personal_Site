@@ -10,9 +10,9 @@ const Support = () => {
                     Jeżeli podoba Ci się to, co robię i uważasz, że warto wesprzeć mnie finansowo, możesz to zrobić na Patronite. Za wszelkie wpłaty serdecznie dziękuję.
                </p>
                 <iframe
-                    className="mx-auto mt-8"
-                    src="https://patronite.pl/widget/vicek83/151885/small/light/colorful?description=Dzi%C4%99kuje%20za%20Twoje%20wsparcie!"
-                    width="480" height="330" frameBorder="0" scrolling="no"></iframe>
+                    className="mx-auto mt-8 w-96 h-72"
+                    src="https://patronite.pl/widget/vicek83/151885/small/light/colorful?description=Dzi%C4%99kuj%C4%99%20za%20Twoje%20wsparcie!"
+                     frameBorder="0" scrolling="no"></iframe>
                 <p className=" text-xl  mt-8 text-left"><span className="font-bold font-['courgette']">Tłumacz - </span>
                     Jak pewnie zauważyliście, wciąż rzadko nagrywam serie let's play z przygodówek nieposiadających polskich wersji językowych. Może się to zmienić, jednak chciałbym do każdej gry prezentowanej w języku angielskim dodawać polskie napisy. Jeśli więc znajdzie się ktoś, kto pomoże mi w tłumaczeniu tekstów z gry na język polski, przyjmę go z otwartymi ramionami.
                 </p>
@@ -22,7 +22,7 @@ const Support = () => {
                 <p className="text-lg mt-8 text-left italic">Dark Seed, Dark Seed 2, Ween: The Prophecy, Innocent Until Caught, The Dark Eye, Dreamweb, Cruise for a Corpse, Ringworld: Revenge of the Patriarch, Return to Ringworld, Universe, Alien Incident, Maupiti Island, Bad Day on the Midway, Dementia, The Big Red Adventure, Discworld, Discworld 2, Discworld Noir, Guilty, Amber: Journeys Beyond, Fable, The Gene Machine, Muppet Treasure Island, 101 Dalmatians: Escape from DeVil Manor, Noir: A Shadowy Thriller, Urban Runner, 9: The Last Resort, Wersal 1685: Intrygi na dworze Ludwika XIV, Wersal II: Testament Króla, Callahan's Crosstime Saloon, Byzantine: The Betrayal, Blackstone Chronicles, Nightlong: Union City Conspiracy, Zelenhgorm: Land of the Blue Moon</p>
                </div>
             <p className=" text-xl  mt-8 text-left"><span className="font-bold font-['courgette']">Współpraca - </span>
-                Jeśli jesteś przedstawicielem producenta lub wydawcy zajmującego się grami przygodowymi bądź masz kanał na YouTube i chcesz nawiązać współpracę, skorzystaj z formularza kontaktowego. Jestem otwarty na wszelkie propozycje, choć z góry zaznaczam, że opinie prezentowane na kanale nie podlegają negocjacjom biznesowym czy marketingowym - były, są i będą w stu procentach szczere :)
+                Jeśli jesteś przedstawicielem producenta lub wydawcy zajmującego się grami przygodowymi bądź prowadzisz kanał na YouTube i chcesz nawiązać współpracę, skorzystaj z formularza kontaktowego. Jestem otwarty na wszelkie propozycje, choć z góry zaznaczam, że opinie prezentowane na kanale nie podlegają negocjacjom biznesowym czy marketingowym - były, są i będą w stu procentach szczere :)
             </p>
             <hr className="mt-24 mb-16 h-1 mx-auto my-4 bg-gray-600 rounded" />
 
