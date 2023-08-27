@@ -9,8 +9,8 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
 
-    const activeLink = "text-lg bg-cyan-600 p-5 md:text-sm lg:text-base xl:text-xl text-white rounded-2xl mt-4 w-3/4 lg:w-48 xl:w-60 ring ring-offset-2 ring-cyan-600 hover:bg-cyan-500";
-    const normalLink = "text-lg bg-cyan-600 p-5 md:text-sm lg:text-base xl:text-xl text-white rounded-2xl mt-4 w-3/4 lg:w-48 xl:w-60 hover:bg-cyan-500";
+    const activeLink = "text-lg bg-cyan-600 p-5 lg:text-base xl:text-xl text-white rounded-2xl mt-4 w-3/4 lg:w-48 xl:w-60 ring ring-offset-2 ring-cyan-600 hover:bg-cyan-500";
+    const normalLink = "text-lg bg-cyan-600 p-5 lg:text-base xl:text-xl text-white rounded-2xl mt-4 w-3/4 lg:w-48 xl:w-60 hover:bg-cyan-500";
     return (
         <>
 
