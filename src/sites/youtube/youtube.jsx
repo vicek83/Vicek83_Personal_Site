@@ -11,12 +11,12 @@ const Youtube = ({playlists}) => {
                     <div className="flex gap-14 justify-center mb-8">
                     <Link to="/youtube">
                         <button
-                            className="uppercase p-5 text-3xl text-black text-bold underline underline-offset-8 mt-4 w-60 hover:scale-125 transition-transform duration-300">Let's playe
+                            className="uppercase p-5 text-xl md:text-3xl text-black text-bold underline underline-offset-8 mt-4 w-60 hover:scale-125 transition-transform duration-300">Let's playe
                         </button>
                     </Link>
                     <Link to="/youtube/reviews">
                         <button
-                            className="uppercase p-5 text-3xl text-black text-bold mt-4 w-60 hover:scale-125 transition-transform duration-300">Recenzje
+                            className="uppercase p-5 text-xl md:text-3xl text-black text-bold mt-4 w-60 hover:scale-125 transition-transform duration-300">Recenzje
                         </button>
                     </Link>
                     </div>

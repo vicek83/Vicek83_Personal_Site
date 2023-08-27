@@ -9,8 +9,8 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
 
-    const activeLink = "bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 ring ring-offset-2 ring-cyan-600 hover:bg-cyan-500";
-    const normalLink = "bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500";
+    const activeLink = "text-lg bg-cyan-600 p-5 md:text-sm lg:text-base xl:text-xl text-white rounded-2xl mt-4 w-3/4 lg:w-48 xl:w-60 ring ring-offset-2 ring-cyan-600 hover:bg-cyan-500";
+    const normalLink = "text-lg bg-cyan-600 p-5 md:text-sm lg:text-base xl:text-xl text-white rounded-2xl mt-4 w-3/4 lg:w-48 xl:w-60 hover:bg-cyan-500";
     return (
         <>
 
@@ -49,7 +49,7 @@ const Header = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="flex flex-wrap items-center justify-between">
+                    <div className="flex flex-col md:flex-row flex-wrap items-center md:justify-center lg:justify-between">
                         <NavLink end
                                  to="/"
                                  className={({isActive}) =>

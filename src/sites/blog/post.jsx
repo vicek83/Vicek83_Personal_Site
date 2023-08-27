@@ -19,7 +19,8 @@ import {
 const Post = () => {
 
     const location = useLocation();
-    const blogNotes = location.state;
+    const { blogNotes } = location.state;
+    console.log(blogNotes);
     const baseUrl = "https://vicek83.netlify.app/blog"
 
     const {id} = useParams();
