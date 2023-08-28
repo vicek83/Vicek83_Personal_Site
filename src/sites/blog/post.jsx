@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import ReactPlayer from "react-player";
 import {Link, useLocation, useParams} from "react-router-dom";
+import {Helmet} from "react-helmet";
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -63,6 +64,12 @@ const Post = ({numberOfNotes}) => {
                                 ) : (
                                     <div key={note.id}
                                          className="">
+                                        <Helmet>
+                                            <title>{note.title}</title>
+                                            <meta property="og:title" content={note.title} />
+                                            <meta property="og:description" content={note.description} />
+                                            <meta property="og:image" content={note.image} />
+                                        </Helmet>
                                         <div className="">
                                             <h1 className="font-['courgette'] text-5xl mb-8">{note.title}</h1>
                                             <h3 className="font-black text-sm mb-8">{note.created_at}</h3>
@@ -72,12 +79,15 @@ const Post = ({numberOfNotes}) => {
                                             <div className="flex justify-center items-center mb-8">
                                                 <ReactPlayer url={note.video} controls/>
                                             </div>
-                                            <FacebookShareButton url={`${baseUrl}/${id}`}>Udostępnij na Facebooku</FacebookShareButton>
-                                            <Link to="/blog">
-                                                <button
-                                                    className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">powrót
-                                                </button>
-                                            </Link>
+                                            <div className="flex flex-col">
+                                                <FacebookShareButton className="mx-auto" url={`${baseUrl}/${id}`}>Udostępnij na Facebooku</FacebookShareButton>
+                                                <Link to="/blog">
+                                                    <button
+                                                        className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">powrót
+                                                    </button>
+                                                </Link>
+                                            </div>
+
 
                                         </div>
 
