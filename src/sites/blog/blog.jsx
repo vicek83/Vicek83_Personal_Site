@@ -15,7 +15,7 @@ const Blog = ({ blogNotes }) => {
                     className="">
                     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3">
                         {blogNotes.map((note => (
-                            <Link key={note.id} to={`/blog/${note.id}`} state={{ blogNotes: blogNotes }}>
+                            <Link key={note.id} to={`/blog/${note.id}`}>
 
                             <button key={note.id} className="p-4 w-full h-full border-black border-2 border-solid rounded mb-1 shadow-lg hover:shadow-2xl" >
 

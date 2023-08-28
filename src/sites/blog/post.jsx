@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import ReactPlayer from "react-player";
 import {Link, useLocation, useParams} from "react-router-dom";
 import {
@@ -13,14 +13,40 @@ import {
     FacebookMessengerIcon,
     TwitterIcon,
 } from "react-share";
+import {supabase} from "../../supabaseClient.js";
 
 
+const Post = ({numberOfNotes}) => {
 
-const Post = () => {
+    const [blogNotes, setBlogNotes] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    const location = useLocation();
-    const { blogNotes } = location.state;
-    console.log(blogNotes);
+    useEffect(() => {
+        getBlog();
+    }, [])
+
+
+    async function getBlog() {
+        try {
+            const {data: Blog, error} = await supabase
+                .from('Blog')
+                .select('*')
+                .order('id', {ascending: false})
+                .limit(numberOfNotes)
+
+            if (error) throw error;
+            if (Blog !== null) {
+                console.log(Blog);
+                setBlogNotes(Blog);
+                setIsLoading(false);
+
+            }
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+
+
     const baseUrl = "https://vicek83.netlify.app/blog"
 
     const {id} = useParams();
@@ -33,6 +59,8 @@ const Post = () => {
                         if (note.id === parseInt(id)) {
                             return (
                                 <>
+                                {isLoading ? ( <p className="text-2xl">Trwa pobieranie danych...</p>
+                                ) : (
                                     <div key={note.id}
                                          className="">
                                         <div className="">
@@ -53,7 +81,7 @@ const Post = () => {
 
                                         </div>
 
-                                    </div>
+                                    </div>)}
                                 </>
                             );
                         }
