@@ -80,7 +80,7 @@ const Post = ({numberOfNotes}) => {
                                                 <ReactPlayer url={note.video} controls/>
                                             </div>
                                             <div className="flex flex-col">
-                                                <FacebookShareButton className="mx-auto" url={`${baseUrl}/${id}`}>Udostępnij na Facebooku</FacebookShareButton>
+                                                <FacebookShareButton className="mx-auto" url={window.location.href} quote={note.description}>Udostępnij na Facebooku</FacebookShareButton>
                                                 <Link to="/blog">
                                                     <button
                                                         className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">powrót
