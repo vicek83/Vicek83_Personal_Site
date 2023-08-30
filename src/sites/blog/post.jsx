@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import ReactPlayer from "react-player";
 import {Link, useLocation, useParams} from "react-router-dom";
 import {Helmet} from "react-helmet";
+import {useCookies} from "react-cookie";
 import {
     EmailShareButton,
     FacebookShareButton,
@@ -21,6 +22,8 @@ const Post = ({numberOfNotes}) => {
 
     const [blogNotes, setBlogNotes] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [cookies, setCookie] = useCookies(['title']);
+
 
     useEffect(() => {
         getBlog();
@@ -48,7 +51,8 @@ const Post = ({numberOfNotes}) => {
     }
 
 
-    const baseUrl = "https://vicek83.netlify.app/blog"
+    const baseUrl = "https://vicek83.netlify.app/blog";
+
 
     const {id} = useParams();
     return (
@@ -58,6 +62,7 @@ const Post = ({numberOfNotes}) => {
 
                     {blogNotes.map((note => {
                         if (note.id === parseInt(id)) {
+                            const currentUrl = `${baseUrl}/${id}`;
                             return (
                                 <>
                                 {isLoading ? ( <p className="text-2xl">Trwa pobieranie danych...</p>
@@ -69,6 +74,7 @@ const Post = ({numberOfNotes}) => {
                                             <meta property="og:title" content={note.title} />
                                             <meta property="og:description" content={note.description} />
                                             <meta property="og:image" content={note.image} />
+                                            <link rel="canonical" href={currentUrl} />
                                         </Helmet>
                                         <div className="">
                                             <h1 className="font-['courgette'] text-5xl mb-8">{note.title}</h1>
@@ -80,7 +86,7 @@ const Post = ({numberOfNotes}) => {
                                                 <ReactPlayer url={note.video} controls/>
                                             </div>
                                             <div className="flex flex-col">
-                                                <FacebookShareButton className="mx-auto" url={window.location.href} quote={note.description}>Udostępnij na Facebooku</FacebookShareButton>
+                                               <FacebookShareButton url={currentUrl} quote="jjj">Udostępnij:<FacebookIcon className="mx-auto" size={42}></FacebookIcon></FacebookShareButton>
                                                 <Link to="/blog">
                                                     <button
                                                         className="uppercase bg-cyan-600 p-5 text-xl text-white rounded-2xl mt-4 w-60 hover:bg-cyan-500">powrót
