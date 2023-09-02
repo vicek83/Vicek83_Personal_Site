@@ -10,7 +10,7 @@ const Support = () => {
                     Jeżeli podoba Ci się to, co robię i uważasz, że warto wesprzeć mnie finansowo, możesz to zrobić na Patronite. Za wszelkie wpłaty serdecznie dziękuję.
                </p>
                 <iframe
-                    className="mx-auto mt-8 w-96 h-72"
+                    className="mx-auto mt-8 w-5/6 md:w-96 h-72"
                     src="https://patronite.pl/widget/vicek83/151885/small/light/colorful?description=Dzi%C4%99kuj%C4%99%20za%20Twoje%20wsparcie!"
                      frameBorder="0" scrolling="no"></iframe>
                 <p className=" text-xl  mt-8 text-left"><span className="font-bold font-['courgette']">Tłumacz - </span>

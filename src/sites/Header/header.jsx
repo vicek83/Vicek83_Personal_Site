@@ -19,32 +19,32 @@ const Header = () => {
                 <header
                     className="mt-2 shadow-lg py-4 px-8 bg-gradient-to-b from from-sky-200 to-white rounded ring ring-sky-500 ring-offset-2">
                     <div className="flex items-center justify-between">
-                        <img className="invisible md:visible" src={logo} alt="logo"/>
-                        <p className="text-2xl uppercase md:text-4xl font-bold text-black"> vicek83 - świat przygodówek</p>
+                        <img className="hidden md:inline-block" src={logo} alt="logo"/>
+                        <p className="text-2xl uppercase mx-auto md:text-4xl font-bold text-black"> vicek83 - świat przygodówek</p>
                         <div className="flex gap-2">
                             <a href="https://www.youtube.com/@vicek83" target="_blank">
                                 <img src={youtube}
-                                     className="invisible md:visible w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
+                                     className="hidden md:inline-block w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
                                      alt="icon-youtube"/>
                             </a>
                             <a href="https://discord.gg/UTFvTSu" target="_blank">
                                 <img src={discord}
-                                     className="invisible md:visible w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
+                                     className="hidden md:inline-block w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
                                      alt="icon-discord"/>
                             </a>
                             <a href="https://www.instagram.com/vicek83/" target="_blank">
                                 <img src={instagram}
-                                     className="invisible md:visible w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
+                                     className="hidden md:inline-block w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
                                      alt="icon-instagram"/>
                             </a>
                             <a href="https://www.facebook.com/Vicek83/" target="_blank">
                                 <img src={facebook}
-                                     className="invisible md:visible w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
+                                     className="hidden md:inline-block w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
                                      alt="icon-facebook"/>
                             </a>
                             <a href="https://www.twitch.tv/vicek83" target="_blank">
                                 <img src={twitch}
-                                     className="invisible md:visible w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
+                                     className="hidden md:inline-block w-8 transform hover:scale-125 transition duration-500 hover:opacity-60"
                                      alt="icon-twitch"/>
                             </a>
                         </div>
